@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <strong>Result</strong>
+    <div id="root">
+    </div>
+    <script>
+        const first=prompt("Enter your first number:- ").toString();
+        const operator=prompt("Enter your operator(+,-,*,/):- ").toString();
+        const second=prompt("Enter your second number:- ").toString();
+        const Result=eval((first+operator+second));
+        document.getElementById("root").innerHTML=Result;
+    </script>
+</body>
+</html>

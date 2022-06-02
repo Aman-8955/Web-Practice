@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+             const num=parseInt(prompt("Enter your number:-"));
+             let temp_num=num,result=0;
+             while(temp_num!=0){
+                  result=(result*10)+(temp_num%10)
+                  temp_num=parseInt(temp_num/10);
+             }
+
+             if (result==num) {
+                 document.write("This is a palindrom number...");
+             }
+             else{
+                 document.write("This is not a palindrom number...");
+             }
+        </script>
+    </body>
+</html>

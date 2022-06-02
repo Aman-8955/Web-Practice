@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <div id="root">
+        </div>
+        <script>
+           const root= document.getElementById("root");
+           for(let i=0;i<=15;i++){
+               if(i%2==0){
+                   root.innerHTML+=`<p>${i} is an even number</p>`
+               }
+               else{
+                root.innerHTML+=`<p>${i} is a odd number</p>`
+               }
+           }
+        </script>
+    </body>
+</html>

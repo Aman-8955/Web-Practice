@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        .white {
+            float: left;
+            width: 80px;
+            height: 80px;
+            background-color: rgb(156, 146, 146);
+        }
+
+        .black {
+            float: left;
+            width: 80px;
+            height: 80px;
+            background-color: rgb(29, 21, 21);
+        }
+
+        #chessboard {
+            width: 640px;
+            height: 640px;
+            margin: 80px;
+            border: 25px solid rgb(29, 21, 21);
+            padding: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chessboard">
+    </div>
+    <script>
+        let chessboard = document.getElementById("chessboard")
+        let arr = ["black", "white"]
+        let index;
+        for (let i = 1; i <= 64; i++) {
+            if (i % 2 == 0)
+                index = 0;
+            else
+                index = 1;
+            chessboard.innerHTML += `<div class="${arr[index]}"></div>`
+            if (i % 8 == 0) {
+                arr[2] = arr[0];
+                arr[0] = arr[1];
+                arr[1] = arr[2];
+            }
+        }
+    </script>
+</body>
+
+</html>
